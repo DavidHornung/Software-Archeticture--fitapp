@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <div align="center"><img src="https://fontmeme.com/permalink/221125/f86931cd7b1c8fe789c22165a2aa60ad.png" class="imageheader"/></div>
+        <br/>
+        <div align="center"><img src="https://fontmeme.com/permalink/221125/133d42057a9efa2ee7fa76e51627ba66.png" class="imageheader"/></div>
+        <br/>
+    </h:head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style>
+.buttons:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+    align-content: center;
+}
+.poekemonmaster{
+  width: 250px;
+  height: auto;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+  body {
+  background-image: url(https://cdn1.dotesports.com/wp-content/uploads/2022/06/30123010/Castelia_Gym_field.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+    align-content: center;
+}
+.poekemonmaster{
+  width: 200px;
+  height: auto;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+</style>
+    <h:body>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+       <center>
+           <table>
+                <tr>
+         <th><h:graphicImage value="https://www.pokepedia.fr/images/thumb/4/44/Psykokwak-RFVF.png/692px-Psykokwak-RFVF.png?20200407162627" class="poekemonmaster" id="imgClickAndChangeSophie" onclick="changeImageSophie()"/></th>
+    <th><h:graphicImage value="https://www.pokepedia.fr/images/2/24/Tortank-RFVF.png" class="poekemonmaster" id="imgClickAndChangeDavid" onclick="changeImageDavid()"/></th>
+    <th><h:graphicImage value="https://www.pokepedia.fr/images/1/17/Dracaufeu-RFVF.png" class="poekemonmaster" id="imgClickAndChangeAdrian" onclick="changeImageAdrian()"/></th>
+    <th><h:graphicImage value="https://www.pokepedia.fr/images/e/ee/Mackogneur-RFVF.png" class="poekemonmaster" id="imgClickAndChangeGuillaume" onclick="changeImageGuillaume()"/></th>
+  </tr>
+  <tr>
+    <th><h:graphicImage value="https://fontmeme.com/permalink/221121/2d65aae5e6e5097b67e56748d1363cfc.png"/></th>
+    <th><h:graphicImage value="https://fontmeme.com/permalink/221121/e36c4af680b2f140c1b9b5e03255b66f.png"/></th>
+    <th><h:graphicImage value="https://fontmeme.com/permalink/221121/9dbabb5864c84011d0bd22d2c414a4e0.png"/></th>
+    <th><h:graphicImage value="https://fontmeme.com/permalink/221121/92ed49e81f563c6f16ce96004fa44d53.png"/></th>
+  </tr>          
+     </table>
+           <br/>
+           <br/>
+           <br/>
+           <br/>
+            <h:link outcome="/MainPage/MainPage.xhtml?faces-redirect=true" >
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/9a98b743446c7b274bdae7feb1c9ab6d.png" style="border: none" class="buttons"/>
+            </h:link>           
+    </center>
+
+    </h:body>
+    <script>
+        function changeImageSophie() {
+    if (document.getElementById("imgClickAndChangeSophie").src == "https://www.pokepedia.fr/images/thumb/4/44/Psykokwak-RFVF.png/692px-Psykokwak-RFVF.png?20200407162627"){
+        document.getElementById("imgClickAndChangeSophie").src = "https://sylvainleroy.com/wp-content/uploads/2021/05/java16.jpeg";
+    } else {
+        document.getElementById("imgClickAndChangeSophie").src = "https://www.pokepedia.fr/images/thumb/4/44/Psykokwak-RFVF.png/692px-Psykokwak-RFVF.png?20200407162627";
+    }
+}
+function changeImageDavid() {
+    if (document.getElementById("imgClickAndChangeDavid").src == "https://www.pokepedia.fr/images/2/24/Tortank-RFVF.png"){
+        document.getElementById("imgClickAndChangeDavid").src = "https://www.thecoderpedia.com/wp-content/uploads/2020/06/Programming-Memes-Programmer-while-sleeping.jpg?x34900";
+    } else {
+        document.getElementById("imgClickAndChangeDavid").src = "https://www.pokepedia.fr/images/2/24/Tortank-RFVF.png";
+    }
+}
+function changeImageAdrian() {
+    if (document.getElementById("imgClickAndChangeAdrian").src == "https://www.pokepedia.fr/images/1/17/Dracaufeu-RFVF.png"){
+        document.getElementById("imgClickAndChangeAdrian").src = "https://img.devrant.com/devrant/rant/r_2320300_8CgA3.jpg";
+    } else {
+        document.getElementById("imgClickAndChangeAdrian").src = "https://www.pokepedia.fr/images/1/17/Dracaufeu-RFVF.png";
+    }
+}
+function changeImageGuillaume() {
+    if (document.getElementById("imgClickAndChangeGuillaume").src == "https://www.pokepedia.fr/images/e/ee/Mackogneur-RFVF.png"){
+        document.getElementById("imgClickAndChangeGuillaume").src = "https://pbs.twimg.com/media/CI0o5LkWUAAFjSI.jpg";
+    } else {
+        document.getElementById("imgClickAndChangeGuillaume").src = "https://www.pokepedia.fr/images/e/ee/Mackogneur-RFVF.png";
+    }
+}
+
+    </script>
+</html>

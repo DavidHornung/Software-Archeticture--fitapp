@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:x="http://primefaces.org/ui">
+    <h:head>
+        <div align="center"><img src="https://fontmeme.com/permalink/221116/dcfd1aa1104ebc374377361fdec976a7.png"/></div>
+        <br/>
+        <div align="center"><img src="https://fontmeme.com/permalink/221116/e14eeaeac1f239ddf07a9ee034a7ec2d.png" alt=""/></div>
+        <br/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+  body {
+  background-image: url(https://cdn1.dotesports.com/wp-content/uploads/2022/06/30123010/Castelia_Gym_field.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+</style>
+    </h:head>
+    <h:body>
+        <center>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>
+                   <br/>                   
+            <h:form>
+                <x:messages>
+                    <x:autoUpdate/>
+                </x:messages>
+                
+                <h:panelGrid id="grid" columns="4" cellpadding="7">
+                    <h:graphicImage value="https://fontmeme.com/permalink/221123/b3f07fba34ac04d6819e718c1cec47c9.png" style="border: none" />
+                    <x:inputText id="Username" value="#{userBean.username}"
+                                validatorMessage="Value does not match pattern.">
+                        <f:validateRegex pattern="^[A-Z]{1}[a-z]{1,20}"/>
+                    </x:inputText>
+                    <x:message for="Username"/>
+                    <h:outputText value="#{userBean.username}"/>
+                    
+                    <h:graphicImage value="https://fontmeme.com/permalink/221123/55efc87891c33e2208e502bbdf03ed4a.png" style="border: none" />
+                    <x:inputText id="FirstName" value="#{userBean.firstName}"
+                                validatorMessage="Value does not match pattern.">
+                        <f:validateRegex pattern="^[A-Z]{1}[a-z]{1,20}"/>
+                    </x:inputText>
+                    <x:message for="FirstName"/>
+                    <h:outputText value="#{userBean.firstName}"/>
+                    
+                    <h:graphicImage value="https://fontmeme.com/permalink/221123/d0c802716421791855035c4a4f50447e.png" style="border: none" />
+                    <x:inputText id="LastName" value="#{userBean.lastName}"
+                                validatorMessage="Value does not match pattern.">
+                        <f:validateRegex pattern="^[A-Z]{1}[a-z]{1,20}"/>
+                    </x:inputText>
+                    <x:message for="LastName"/>
+                    <h:outputText value="#{userBean.lastName}" />
+                    
+                    <h:graphicImage value="https://fontmeme.com/permalink/221123/46068c57ba77860fe8fc1e14fa7d7298.png" style="border: none" />
+                    <x:inputText id="Email" value="#{userBean.email}"
+                                validatorMessage="Value does not match pattern.">
+                        <f:validateRegex pattern="^[a-zA-Z0-9_!#$%&amp;’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$"/>
+                    </x:inputText>
+                    <x:message for="Email"/>
+                    <h:outputText value="#{userBean.email}" />  
+                                     
+                    <h:graphicImage value="https://fontmeme.com/permalink/221123/8d1af3cd2e18504a9fa836360e9ce59b.png" style="border: none" />
+                    <x:password id="feedback" value="#{userBean.password}" feedback="true" required="true"/>
+                    <h:outputText value=""/>
+                    <h:outputText value=""/>
+                    
+                    <h:graphicImage value="https://fontmeme.com/permalink/221123/a8c38e6d0a387574f2d54f535658b40b.png" style="border: none" />
+                    <x:inputNumber id="Age" value="#{userBean.age}" minValue="10" maxValue="120" decimalPlaces="0"
+                                   required="true" emptyValue="empty">  
+                        <x:ajax update="Age" />  
+                    </x:inputNumber>
+                    <h:outputText value=""/>
+                    <h:outputText value=""/>
+                    
+                    <h:graphicImage value="https://fontmeme.com/permalink/221123/74c0b181db58c809d6631c0962567c39.png" style="border: none" />
+                    <x:inputNumber id="Height" value="#{userBean.height}" minValue="1" maxValue="2.50" decimalPlaces="2"
+                                   required="true" emptyValue="empty">  
+                        <x:ajax update="Height" />  
+                    </x:inputNumber>
+                    <h:outputText value=""/>
+                    <h:outputText value=""/>                    
+ 
+                    <h:graphicImage value="https://fontmeme.com/permalink/221124/162d30b338816b043d64ec4f14b96755.png" style="border: none" />
+                    <x:inputNumber id="weight" value="#{userBean.weight}" minValue="20" maxValue="300" decimalPlaces="1"
+                                   required="true" emptyValue="empty">  
+                        <x:ajax update="weight" />  
+                    </x:inputNumber>
+                    <h:outputText value=""/>
+                    <h:outputText value=""/>
+                    
+                    <h:graphicImage value="https://fontmeme.com/permalink/221124/141d5badad498f21df067024d968ed3d.png" style="border: none" />
+                    <x:selectOneButton value="#{userBean.gender}" required="true">
+                        <f:selectItem itemLabel="F" itemValue="F" />
+                        <f:selectItem itemLabel="N" itemValue="N" />
+                        <f:selectItem itemLabel="M" itemValue="M" />
+                    </x:selectOneButton>
+                    <h:outputText value=""/>
+                    <h:outputText value=""/>
+                    <h:outputText value=""/>
+                    <h:outputText value=""/>
+                    <h:outputText value=""/>
+
+                    <br/>
+                    <br/>
+                    <h:commandLink action="#{userBean.createAUser()}">
+                    <h:graphicImage value="https://fontmeme.com/permalink/221125/179fd8f5294807f2313fd1ac59f323ac.png" style="border: none" class="buttons"/>
+                    </h:commandLink> 
+                    <h:link outcome="/MainPage/MainPage.xhtml?faces-redirect=true" >
+                        <h:graphicImage value="https://fontmeme.com/permalink/221125/9a98b743446c7b274bdae7feb1c9ab6d.png" style="border: none" class="buttons"/>
+                    </h:link>                   
+                
+            </h:panelGrid>               
+            </h:form>
+        </center>
+    </h:body>
+</html>
