@@ -1,0 +1,14 @@
+ch\unil\doplab\gadsweb\Client\PersistenceClient.class
+ch\unil\doplab\gadsweb\Beans\TrainingProgramBean.class
+ch\unil\doplab\gadsweb\resources\JavaEE8Resource.class
+ch\unil\doplab\gadswebsite\models\User.class
+ch\unil\doplab\gadsweb\Beans\LoginBean.class
+ch\unil\doplab\gadsweb\resources\JAXRSConfiguration.class
+ch\unil\doplab\gadswebsite\exceptions\DoesNotExistException.class
+ch\unil\doplab\gadswebsite\models\Recipe.class
+ch\unil\doplab\gadsweb\Beans\RecipeBean.class
+ch\unil\doplab\gadsweb\Beans\AchievementBean.class
+ch\unil\doplab\gadswebsite\models\Achievement.class
+ch\unil\doplab\gadswebsite\exceptions\AlreadyExistsException.class
+ch\unil\doplab\gadsweb\Beans\UserBean.class
+ch\unil\doplab\gadswebsite\models\Trainingprogram.class
