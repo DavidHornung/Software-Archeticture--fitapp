@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:x="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">>
+
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <style>
+
+      body { 
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .header {
+        overflow: hidden;
+
+        padding: 20px 10px;
+      }
+
+      .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px; 
+        line-height: 25px;
+        border-radius: 4px;
+      }
+
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      
+
+      .header a.active {
+        background-color: dodgerblue;
+        color: white;
+      }
+
+      .header-right {
+        float: right;
+      }
+      
+    .Pokemon{
+      width: 300px;
+      height: auto;
+    }      
+
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          text-align: left;
+        }
+
+        .header-right {
+          float: none;
+        }
+      }
+      </style>
+    </h:head>
+    <style>
+  body {
+  background-image: url(https://cdn1.dotesports.com/wp-content/uploads/2022/06/30123010/Castelia_Gym_field.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+img {align-content: center
+ }
+.buttons:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+</style>
+        <h:body>
+
+    <div class="header">
+        <img src="https://fontmeme.com/permalink/221116/dcfd1aa1104ebc374377361fdec976a7.png"></img>
+
+      <div class="header-right">
+
+        <a> 
+            <!-- comment  SHOW USER MAIN PAGE (ACCUEIL) -->
+            <h:link outcome="UserMainPage.xhtml?faces-redirect=true">
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/0ec1c3def7d69c660b8ce60d43244025.png"  style="border: none" class="buttons"/>
+            </h:link> 
+        </a>
+
+        <a> 
+
+            <!-- comment  SHOW USER INFORMATION PAGE (Profile) -->
+            <h:link outcome="ShowInfo.xhtml?faces-redirect=true">
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/cc080287bb06fbd3683a42091f21a016.png" style="border: none" class="buttons"/>
+            </h:link> 
+        </a>
+        
+        <a> 
+
+            <!-- comment  SHOW DASHBOARD -->
+            <h:link outcome="Dashboard.xhtml?faces-redirect=true">
+              <h:graphicImage value="https://fontmeme.com/permalink/221125/f2f217cbeabd168f7c59189ac08cd0d2.png" style="border: none" class="buttons"/>
+          </h:link> </a>
+
+        <!-- comment  SHOW SUCCESS -->
+
+        <a> <h:link outcome="Succes.xhtml?faces-redirect=true">
+              <h:graphicImage value="https://fontmeme.com/permalink/221125/c1d6ea01cac20fdc50a1c0d1a01b0186.png" style="padding-top:10px" class="buttons"/>        
+            </h:link> </a>
+
+        <!-- comment  LOG OUT  -->
+        <a>
+          <h:form>
+              <h:commandButton action="#{loginBean.userLogsout()}" image="https://fontmeme.com/permalink/221125/a2001c1684c71fa70964f4dffb845218.png" class="buttons"/>
+          </h:form>
+        </a>     
+      </div>
+    </div>
+            <br/><br/>
+        <center>
+        <h:form>
+            <h:panelGrid columns="1">
+                
+                <h:graphicImage  value="https://fontmeme.com/permalink/221209/83ca5c04d8710440077fa8fe9adf7559.png" style="vertical-align: middle;"/> 
+                </h:panelGrid>
+            <br/>
+            <br/>
+                <h:panelGrid columns="2">
+                <h:graphicImage value="https://fontmeme.com/permalink/221209/59c5ab64869a0a39f2085b2cebdeed24.png" />
+                <x:inputNumber value="#{achievementBean.actualWeight}" decimalPlaces="1" />              
+                   </h:panelGrid>
+            <br/>
+            <br/>
+                    <h:commandLink action="#{achievementBean.generateAchievement()}">
+                    <h:graphicImage value="https://fontmeme.com/permalink/221209/bff2afa29fc199a03fb76f2537b9e3e2.png" style="border: none" class="buttons"/>
+                    </h:commandLink>
+                    <br></br>
+                    <br></br>
+                    <ui:repeat value="#{loginBean.currentUser.achievementList}" var="item">
+                    <table>
+                    <h:panelGrid columns="1">
+                        <h:graphicImage value="#{item.achievementpokemon}" class="Pokemon" />
+                    </h:panelGrid>
+                    </table>
+                    </ui:repeat> 
+            </h:form>
+        </center>
+    </h:body>
+</html>
+

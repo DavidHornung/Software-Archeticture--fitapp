@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:x="http://primefaces.org/ui">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <style>
+
+      body { 
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .header {
+        overflow: hidden;
+
+        padding: 20px 10px;
+      }
+
+      .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px; 
+        line-height: 25px;
+        border-radius: 4px;
+      }
+
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      
+
+      .header a.active {
+        background-color: dodgerblue;
+        color: white;
+      }
+
+      .header-right {
+        float: right;
+      }
+
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          text-align: left;
+        }
+
+        .header-right {
+          float: none;
+        }
+      }
+      </style>
+    </h:head>
+    <style>
+  body {
+  background-image: url(https://cdn1.dotesports.com/wp-content/uploads/2022/06/30123010/Castelia_Gym_field.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+img {align-content: center
+ }
+.buttons:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+</style>
+  <h:body>
+    <div class="header">
+        <img src="https://fontmeme.com/permalink/221116/dcfd1aa1104ebc374377361fdec976a7.png"></img>
+
+      <div class="header-right">
+          
+        <a> 
+
+            <!-- comment  SHOW USER MAIN PAGE (ACCUEIL) -->
+            <h:link outcome="UserMainPage.xhtml?faces-redirect=true">
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/0ec1c3def7d69c660b8ce60d43244025.png" style="border: none" class="buttons"/>
+            </h:link> 
+        </a>
+
+        <a> 
+            <!-- comment  SHOW USER INFORMATION PAGE (Profile) -->
+            <h:link outcome="ShowInfo.xhtml?faces-redirect=true">
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/cc080287bb06fbd3683a42091f21a016.png" style="border: none" class="buttons"/>
+            </h:link> 
+        </a>
+        
+        <a> 
+            <!-- comment  SHOW DASHBOARD -->
+            <h:link outcome="Dashboard.xhtml?faces-redirect=true">
+              <h:graphicImage value="https://fontmeme.com/permalink/221125/f2f217cbeabd168f7c59189ac08cd0d2.png" style="border: none" class="buttons"/>
+          </h:link> </a>
+
+        <!-- comment  SHOW SUCCESS -->
+
+        <a> <h:link outcome="Succes.xhtml?faces-redirect=true">
+              <h:graphicImage value="https://fontmeme.com/permalink/221125/88b303fd498749aff1db1de18d218544.png" style="padding-top:10px" class="buttons"/>        
+            </h:link> </a>
+
+        <!-- comment  LOG OUT  -->
+        <a>
+          <h:form>
+              <h:commandButton action="#{loginBean.userLogsout()}" image="https://fontmeme.com/permalink/221125/a2001c1684c71fa70964f4dffb845218.png" class="buttons"/>
+          </h:form>
+        </a>        
+      </div>
+    </div>
+             <br/><br/><br/>
+            
+            
+      <center> 
+          <h:graphicImage value="https://fontmeme.com/permalink/221125/2d7aea0d0eef8021349d7d348c5f01b3.png"/>
+          <br/><br/><br/><br/><br/>
+      <h:form>
+
+          
+            <h:panelGrid columns="3">
+
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/2c0e2d9cb6db215e8123ac08516909ed.png" style="padding-right: 200px"/>
+                <h:outputText value="#{loginBean.currentUser.username}" class = "ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled" style="padding-right: auto"/>
+                <x:inputText id="Username" value="#{userBean.username}" class = "ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled" style="padding-right: 200px ; margin-left:100px"
+                                validatorMessage="https://fontmeme.com/permalink/221209/ba3dd7271a8c769ef6aa4464dbfc28b2.png">
+                        <f:validateRegex pattern="^[A-Z]{1}[a-z]{1,20}"/>
+                    </x:inputText>
+
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/23a95896f0a3a6496640a545b0268942.png"/>
+                <h:outputText value="#{loginBean.currentUser.firstname}" class = "ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled" style="padding-right: auto"/>
+                <x:inputText id="FirstName" value="#{userBean.firstName}" class = "ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled" style="padding-right: 200px ; margin-left:100px"
+                                validatorMessage="Value does not match pattern.">
+                        <f:validateRegex pattern="^[A-Z]{1}[a-z]{1,20}"/>
+                    </x:inputText>
+
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/98e69c34b3355bc28a0f96d66dd5fea7.png"/>
+                <h:outputText value="#{loginBean.currentUser.lastName}" class = "ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled" style="padding-right: auto"/>
+                <x:inputText id="LastName" value="#{userBean.lastName}" class = "ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled" style="padding-right: 200px ; margin-left:100px"
+                                validatorMessage="Value does not match pattern.">
+                        <f:validateRegex pattern="^[A-Z]{1}[a-z]{1,20}"/>
+                    </x:inputText>
+
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/bd6a0025a6c1c621943ffc203237e5ef.png"/>
+                <h:outputText value="#{loginBean.currentUser.email}" class = "ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled" style="padding-right: auto"/>
+                <x:inputText id="Email" value="#{userBean.email}" class = "ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled" style="padding-right: 200px ; margin-left:100px"
+                                validatorMessage="Value does not match pattern.">
+                        <f:validateRegex pattern="^[a-zA-Z0-9_!#$%&amp;’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$"/>
+                    </x:inputText>
+
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/755ca099f8f153f3ee5e37c658f2c018.png"/>
+                <h:outputText value="#{userBean.passwordmessage}"/>
+                <h:inputSecret value="#{userBean.password}" class = "ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled" style="padding-right: 200px ; margin-left:100px"/>
+                
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/83067e9c4964ad557aa947ae952e3506.png"/>
+                <h:outputText value="#{loginBean.currentUser.age}" class = "ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled" style="padding-right: auto"/>
+                <x:inputNumber id="Age" value="#{userBean.age}" minValue="10" maxValue="120" decimalPlaces="0"  style="padding-right: 200px ; margin-left:100px"
+                                   required="true" emptyValue="empty">  
+                        <x:ajax update="Age" />  
+                    </x:inputNumber>
+                
+
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/ecce1d3055a490bc36747a56284ab7cf.png"/>
+                <h:outputText value="#{loginBean.currentUser.height}" class = "ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-filled" style="padding-right: auto"/>
+                <x:inputNumber id="Height" value="#{userBean.height}" minValue="1" maxValue="2.50" decimalPlaces="2"  style="padding-right: 200px ; margin-left:100px"
+                                   required="true" emptyValue="empty">  
+                        <x:ajax update="Height" />  
+                    </x:inputNumber>
+                <br/><br/><br/><br/>   
+            </h:panelGrid>
+
+            <h:commandLink action="#{userBean.updateUserInformation()}">
+                <h:graphicImage value="https://fontmeme.com/permalink/221125/a510165b221d2a86247d865a00d22087.png" style="border: none" class="buttons"/>
+            </h:commandLink>    
+          
+
+        </h:form>
+    </center>
+    </h:body>
+</html>
+
