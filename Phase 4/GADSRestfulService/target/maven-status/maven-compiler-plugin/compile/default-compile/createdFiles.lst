@@ -1,0 +1,11 @@
+ch\unil\doplab\gadswebsite\models\Achievement.class
+ch\unil\doplab\gadsrestfulservice\service\TrainingprogramFacadeREST.class
+ch\unil\doplab\gadsrestfulservice\service\RecipeFacadeREST.class
+ch\unil\doplab\gadsrestfulservice\resources\JavaEE8Resource.class
+ch\unil\doplab\gadswebsite\models\User.class
+ch\unil\doplab\gadsrestfulservice\resources\JAXRSConfiguration.class
+ch\unil\doplab\gadsrestfulservice\service\AchievementFacadeREST.class
+ch\unil\doplab\gadsrestfulservice\service\AbstractFacade.class
+ch\unil\doplab\gadswebsite\models\Recipe.class
+ch\unil\doplab\gadsrestfulservice\service\UserFacadeREST.class
+ch\unil\doplab\gadswebsite\models\Trainingprogram.class
