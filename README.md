@@ -11,7 +11,7 @@ The front end was coded using XHTML and CSS.
 
 Our project was divided into 4 phases:
 
-#Phase 1:
+## Phase 1:
 
 We got to write the backend of our website. we could communicate with our website through a main file.
 
@@ -22,10 +22,15 @@ Physical activity
 Training program
 User
 
-#Phase 2:
+## Phase 2:
 
-#Phase 3:
+In this phase, the objective was to build the front end of our website using XHTML and CSS code
 
-#Phase 4:
+## Phase 3:
 
+In this phase, we connected our website to a large database using SQL and MYSQL.
+
+## Phase 4:
+
+In this phase, we separated the front end from the back end and made 2 website that were communicating with each other.
 
