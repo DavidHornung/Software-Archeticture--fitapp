@@ -13,6 +13,15 @@ Our project was divided in 4 phases:
 
 Phase 1:
 
+We got to write the backend of our website. we could communicate with our website throught a main file.
+
+We coded 4 models with their 4 controllers:
+
+Food
+Physical actiity
+Training program
+User
+
 Phase 2:
 
 Phase 3:
