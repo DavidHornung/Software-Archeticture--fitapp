@@ -32,5 +32,5 @@ In this phase, we connected our website to a large database using SQL and MYSQL.
 
 ## Phase 4:
 
-In this phase, we separated the front end from the back end and made 2 website that were communicating with each other.
+In this phase, we separated the front end from the back end and made the two websites communicate through RestAPI with each other.
 
